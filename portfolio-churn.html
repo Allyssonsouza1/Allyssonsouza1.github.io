@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Customer Churn Prediction | Allysson de S. Pereira</title>
+    <meta content="Machine Learning Project: Churn Prediction using Random Forest with 95% accuracy (ROC)."
+        name="description">
+    <meta content="churn prediction, machine learning, Random Forest, Python, Allysson de S. Pereira" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        .lang-switcher {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .lang-switcher a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        .lang-switcher a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .lang-switcher .flag {
+            font-size: 15px;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: var(--accent-color, #0563bb);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin: 3px 2px;
+        }
+
+        .portfolio-info ul li strong {
+            min-width: 90px;
+            display: inline-block;
+        }
+
+        .portfolio-info a {
+            color: var(--accent-color, #0563bb);
+            font-weight: 600;
+        }
+
+        .placeholder-slide {
+            background: #1a1f2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            color: #555;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .placeholder-slide i {
+            font-size: 48px;
+            opacity: 0.3;
+        }
+
+        .placeholder-slide p {
+            font-size: 13px;
+            opacity: 0.5;
+            margin: 0;
+        }
+
+        .swiper-slide img {
+            max-height: 500px;
+            width: 100%;
+            object-fit: contain;
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK8WBCFGK1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JK8WBCFGK1', {
+            'send_page_view': true
+        });
+    </script>
+</head>
+
+<body class="portfolio-details-page">
+
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+
+        <div class="profile-img">
+            <img src="assets/img/my-profile-img.png" alt="Allysson de S. Pereira" class="img-fluid rounded-circle">
+        </div>
+
+        <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Allysson de S. Pereira</h1>
+        </a>
+
+        <div class="lang-switcher">
+            <a href="portfolio-churn.html" class="active-lang"><span class="flag">🇺🇸</span> EN</a>
+            <a href="portfolio-churn-pt.html"><span class="flag">🇧🇷</span> PT</a>
+        </div>
+
+        <div class="social-links text-center">
+            <a href="https://github.com/Allyssonsouza1" class="github" title="GitHub" target="_blank"><i
+                    class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/allyssondesouza/" class="linkedin" title="LinkedIn" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
+        </div>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index.html#hero"><i class="bi bi-house navicon"></i> Home</a></li>
+                <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+                <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+                <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Portfolio</a>
+                </li>
+                <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+                <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">Customer Churn Prediction</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li class="current">Churn Prediction</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Portfolio Details Section -->
+        <section id="portfolio-details" class="portfolio-details section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+
+                    <!-- Image Slider -->
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper init-swiper">
+                            <script type="application/json" class="swiper-config">
+                { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+              </script>
+
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/churn/churn-1.png" alt="Churn Project Image 1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/churn/churn-2.png" alt="Churn Project Image 2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/churn/churn-3.png" alt="Churn Project Image 3">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/churn/churn-4.png" alt="Churn Project Image 4">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <!-- Project Info -->
+                    <div class="col-lg-4">
+                        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Project Information</h3>
+                            <ul>
+                                <li><strong>Category:</strong> Machine Learning</li>
+                                <li><strong>Type:</strong> Binary Classification</li>
+                                <li><strong>Status:</strong> Completed</li>
+                                <li><strong>GitHub:</strong> <a
+                                        href="https://github.com/Allyssonsouza1/Modelo-Preditivo-Churn_Ecommerce"
+                                        target="_blank">View Repository →</a></li>
+                            </ul>
+                            <div class="mt-3">
+                                <strong>Technologies:</strong><br>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">Scikit-learn</span>
+                                <span class="tech-badge">Matplotlib</span>
+                                <span class="tech-badge">Seaborn</span>
+                                <span class="tech-badge">Random Forest</span>
+                                <span class="tech-badge">SHAP Method</span>
+                                
+                            </div>
+                        </div>
+
+                        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                            <h2>E-commerce Customer Churn Prediction</h2>
+                            <p>This project presents the development of a predictive system to combat customer turnover
+                                 (churn) in an e-commerce operation. The work covers the entire life cycle of a
+                                 predictive model: data ingestion and cleaning, exploratory analysis, feature
+                                 engineering, model training, hyperparameter optimization, and interpretability analysis
+                                 using SHAP. The central focus was transforming behavioral data (hours in the app, registered
+                                 devices) and satisfaction history into a decision support tool, allowing the company to act
+                                 proactively with targeted and personalized loyalty campaigns.
+                            </p>
+                            <p>The development focused on the incremental evolution of Random Forest-based models, with an
+                                emphasis on overcoming overfitting to ensure applicability in real-world scenarios. The final
+                                version of the model (V2) prioritized generalization capacity, achieving an increase in Recall
+                                for the churn class from 78% to 80% in the test set. This strategic adjustment ensures that the
+                                company captures a larger share of at-risk customers, optimizing the ROI of retention actions
+                                and reducing the Customer Acquisition Cost (CAC) by focusing on preserving the current base.</p>
+                            <h4 class="mt-3">Key Highlights</h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle text-primary"></i> End-to-End Cycle: Complete implementation
+                                    from handling heterogeneous bases to exporting the optimized final model.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Hyperparameter Optimization: Fine-tuning
+                                    via GridSearch for overfitting mitigation, ensuring the model learns real patterns.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Interpretability with SHAP: Use of SHAP
+                                    values to breakdown the influence of variables such as "distance from warehouse" and "tenure" on the propensity to churn.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Focus on Business Metrics: Prioritization
+                                    of Recall over simple Accuracy, aiming to maximize the identification of customers who are
+                                    actually likely to leave.
+                                </li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Robustness Analysis: Rigorous comparison
+                                    between model versions (V1 vs V2), validating stability and predictive reliability for
+                                    production use.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Allysson de S. Pereira</strong> <span>All Rights
+                        Reserved</span></p>
+            </div>
+            <div class="credits">Designed with <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+        </div>
+    </footer>
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="assets/js/analytics.js"></script>
+</body>
+
+</html>

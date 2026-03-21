@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Allysson de S. Pereira | Data Scientist & Data Analyst</title>
+    <meta
+        content="Portfolio of Allysson de S. Pereira – Data Scientist, Data Analyst with solid knowledge in Python, SQL and advanced analytics."
+        name="description">
+    <meta content="data science, machine learning, data analyst, Python, SQL, Allysson de S. Pereira, portfolio"
+        name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        .lang-switcher {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .lang-switcher a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        .lang-switcher a.active-lang {
+            background: var(--accent-color, #0563bb);
+            border-color: var(--accent-color, #0563bb);
+        }
+
+        .lang-switcher a:not(.active-lang):hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .lang-switcher .flag {
+            font-size: 15px;
+        }
+    </style>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK8WBCFGK1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JK8WBCFGK1', {
+            'send_page_view': true
+        });
+    </script>
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+
+        <div class="profile-img">
+            <img src="assets/img/my-profile-img.png" alt="Allysson de S. Pereira" class="img-fluid rounded-circle">
+        </div>
+
+        <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Allysson de S. Pereira</h1>
+        </a>
+
+        <div class="lang-switcher">
+            <a href="index.html" class="active-lang"><span class="flag">🇺🇸</span> EN</a>
+            <a href="index-pt.html"><span class="flag">🇧🇷</span> PT</a>
+        </div>
+
+        <div class="social-links text-center">
+            <a href="https://github.com/Allyssonsouza1" class="github" title="GitHub" target="_blank"><i
+                    class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/allyssondesouza/" class="linkedin" title="LinkedIn" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
+        </div>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+                <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+                <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+                <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+                <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+                <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background">
+
+            <img src="assets/img/hero-bg.png" alt="" data-aos="fade-in" class="">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <h2>Allysson de S. Pereira</h2>
+                <p>I am a <span class="typed"
+                        data-typed-items="Data Scientist &Data Analyst">Data
+                        Scientist</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            </div>
+
+        </section><!-- /Hero Section -->
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>About</h2>
+                <p> Data Scientist with a strong focus on statistical analysis, time series and Machine Learning
+                    applied to real business problems. I have experience building data pipelines, predictive models
+                    and end-to-end analytical systems, from data collection and processing to production delivery and
+                    insights visualization.
+                    I transform complex data into clear decisions, predictive models and solutions that generate real business
+                    impact.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4 justify-content-center">
+                    <div class="col-lg-4">
+                        <img src="assets/img/my-profile-img.png" class="img-fluid" alt="Allysson de S. Pereira">
+                    </div>
+                    <div class="col-lg-8 content">
+                        <h2>Data Scientist &amp; Data Analyst</h2>
+                        <p class="fst-italic py-3">
+                            With solid experience in end-to-end data pipelines, statistical modeling and machine learning,
+                            I help organizations extract the hidden value in their data — from exploratory analysis to
+                            production-ready predictive models.
+                        </p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Location:</strong>
+                                        <span>São José/Curitiba, Brazil</span>
+                                    </li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>GitHub:</strong>
+                                        <span>github.com/Allyssonsouza1</span>
+                                    </li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
+                                        <span>allyssonsouza1@hotmail.com</span>
+                                    </li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong>
+                                        <span>Available</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Education:</strong> <span>Bachelor's
+                                            Degree in Economics
+                                        </span></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Focus:</strong> <span>Data Science
+                                            &amp; ML; Data Analysis</span></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Languages:</strong> <span>Portuguese,
+                                            English (Intermediate)</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="py-3">
+                            As a Data Scientist, my passion is transforming complex data into clear business decisions and
+                            predictive models that generate real impact.
+                            
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /About Section -->
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section light-background">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Skills</h2>
+                <p>Technical expertise: Data ingestion, transformation and modeling.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row skills-content skills-animation">
+
+                    <div class="col-lg-6">
+
+                        <div class="progress">
+                            <span class="skill"><span>Python (Pandas, NumPy, Scikit-learn)</span> <i
+                                    class="val">70%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                        <div class="progress">
+                            <span class="skill"><span>SQL &amp; Databases (BigQuery, MySQL)</span> <i
+                                    class="val">70%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                        <div class="progress">
+                            <span class="skill"><span>Machine Learning </span> <i
+                                    class="val">65%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <div class="progress">
+                            <span class="skill"><span>Data Visualization (Power BI, Looker Studio, Tableau)</span> <i class="val">80%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                        <div class="progress">
+                            <span class="skill"><span>Statistics &amp; Probability</span> <i
+                                    class="val">65%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                        <div class="progress">
+                            <span class="skill"><span>Cloud &amp; MLOps (GCP)</span> <i
+                                    class="val">60%</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skills Item -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /Skills Section -->
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Resume</h2>
+                <p>Results-oriented professional with experience in data analysis, statistical modeling and
+                    machine learning, committed to delivering measurable business impact through continuous improvement,
+                    operational optimization and data-driven decision making.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="resume-title">Summary</h3>
+
+                        <div class="resume-item pb-0">
+                            <h4>Allysson de S. Pereira</h4>
+                            <p><em>Data Scientist and Data Analyst with experience in data analysis applied to processes, predictive models,
+                                 development of dashboards and indicators, and use of Python and SQL for data exploration and engineering.
+                                 I act in identifying patterns and generating insights to support business decisions, always focusing on
+                                 process optimization and performance improvement through data.</em></p>
+                            <ul>
+                                <li>Brazil</li>
+                                <li>allyssonsouza1@hotmail.com</li>
+                                <li>linkedin.com/in/allyssondesouza</li>
+                            </ul>
+                        </div><!-- End Resume Item -->
+
+                        <h3 class="resume-title">Education</h3>
+                        <div class="resume-item">
+                            <h4>Bachelor's Degree in Mechanical Engineering</h4>
+                            <h5>2014 – 2019</h5>
+                            <p><em>Centro Universitário FIP-MOC - Brazil</em></p>
+                            <p>Solid background in applied mathematics, statistics, process control, operational research and systems analysis,
+                                 with a strong foundation in modeling, problem solving and analytical thinking, applied to understanding and optimizing complex processes.</p>
+                        </div><!-- End Resume Item -->
+
+                        <div class="resume-item">
+                            <h4>Postgraduate in Data Science and Big Data</h4>
+                            <h5>2024 – 2025</h5>
+                            <p><em>Federal University of Paraná (UFPR), Brazil</em></p>
+                            <p>Training with an emphasis on applied statistics, exploratory data analysis, machine learning, predictive modeling and
+                                 data visualization, plus big data concepts and data-driven decision making, contributing to an analytical and
+                                 systemic view in solving business problems.</p>
+                        </div><!-- End Resume Item -->
+
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="resume-title">Professional Experience</h3>
+
+                        <div class="resume-item">
+                            <h4>Process Technical Analyst (Data Focus)</h4>
+                            <h5>Jan 2025 – Mar 2026</h5>
+                            <p><em>Grupo Boticário · Brazil</em></p>
+                            <ul>
+                                <li>
+                                    Development of Data Science projects focused on process optimization and real problem solving.
+                                </li>
+                                <li>
+                                    Development of operational indicators and performance tracking dashboards (Looker, Tableau).
+                                </li>
+                                <li>
+                                    Data modeling of production control systems (SAP, MES).
+                                </li>
+                                <li>
+                                    Construction of data visualizations to support decision making at tactical and managerial levels.
+                                </li>
+                                <li>
+                                    Ad hoc analysis and conduct of advanced studies of indicators, evaluating technical and
+                                    economic feasibility of projects aimed at process optimization and performance improvement.
+                                </li>
+                            </ul>
+                        </div><!-- End Resume Item -->
+
+                        <div class="resume-item">
+                            <h4>Continuous Improvement Analyst</h4>
+                            <h5>April 2023 – February 2025</h5>
+                            <p><em>Charisma BI · Brazil</em></p>
+                            <ul>
+                                <li>
+                                    Development of performance indicator dashboards (Power BI) to monitor operational performance.
+                                </li>
+                                <li>
+                                    Conduction of exploratory data analysis to identify bottlenecks and improvement opportunities.
+                                </li>
+                                <li>
+                                    Management of improvement projects based on ad hoc analysis and performance indicators.
+                                </li>
+                                <li>
+                                    Training of teams in the interpretation of indicators and performance metrics, as well as the
+                                    conduction and monitoring of improvement actions.
+                                </li>
+                            </ul>
+                        </div><!-- End Resume Item -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /Resume Section -->
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio section light-background">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Portfolio</h2>
+                <p>A selection of data science and data analysis projects that demonstrate real-world applications
+                    and technical depth.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                        <li data-filter="*" class="filter-active">All</li>
+                        <li data-filter=".filter-ml">Machine Learning</li>
+                        <li data-filter=".filter-analytics">Analytics</li>
+                        <li data-filter=".filter-viz">Visualization</li>
+                    </ul><!-- End Portfolio Filters -->
+                            
+                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml">
+                            <div class="portfolio-content h-100">
+                                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="Churn Prediction">
+                                <div class="portfolio-info">
+                                    <h4>Customer Churn Prediction</h4>
+                                    <p>Random Forest model with 95% accuracy (ROC) for e-commerce churn</p>
+                                    <a href="assets/img/portfolio/app-1.jpg" title="Churn Prediction"
+                                        data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-churn.html" title="More Details" class="details-link"><i
+                                            class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                            
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-analytics">
+                            <div class="portfolio-content h-100">
+                                <img src="assets/img/portfolio/marketing.jpg" class="img-fluid"
+                                    alt="Consumer Analytics">
+                                <div class="portfolio-info">
+                                    <h4>Consumer Analytics Dashboard</h4>
+                                    <p>Monitoring of Consumer loyalty program KPIs</p>
+                                    <a href="assets/img/portfolio/marketing.jpg" title="Consumer Analytics"
+                                        data-gallery="portfolio-gallery-marketing" class="glightbox preview-link"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-consumer-dashboard.html" title="More Details"
+                                        class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-viz">
+                            <div class="portfolio-content h-100">
+                                <img src="assets/img/portfolio/bisnagas.jpg" class="img-fluid"
+                                    alt="Clustering Project">
+                                <div class="portfolio-info">
+                                    <h4>Clustering Project</h4>
+                                    <p>Tube clustering project for process optimization in the cosmetics industry</p>
+                                    <a href="assets/img/portfolio/bisnagas.jpg" title="Tube Clustering Project"
+                                        data-gallery="portfolio-gallery-bisnagas" class="glightbox preview-link"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-bisnagas.html" title="More Details"
+                                        class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml">
+                            <div class="portfolio-content h-100">
+                                <img src="assets/img/portfolio/timeseries.png" class="img-fluid"
+                                    alt="Time Series Analysis">
+                                <div class="portfolio-info">
+                                    <h4>Time Series</h4>
+                                    <p>Time series modeling with classical algorithms (ARIMA, SARIMA..)</p>
+                                    <a href="assets/img/portfolio/timeseries.png" title="Time Series Analysis"
+                                        data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-timeseries.html" title="More Details"
+                                        class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-analytics">
+                            <div class="portfolio-content h-100">
+                                <img src="assets/img/portfolio/operacoes.png" class="img-fluid"
+                                    alt="Operational Management Analytics">
+                                <div class="portfolio-info">
+                                    <h4>Operations Dashboard</h4>
+                                    <p>Monitoring of key indicators for the Operations area</p>
+                                    <a href="assets/img/portfolio/operacoes.png" title="Operations Dashboard"
+                                        data-gallery="portfolio-gallery-marketing" class="glightbox preview-link"><i
+                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="portfolio-operacoes.html" title="More Details"
+                                        class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                    </div><!-- End Portfolio Container -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Portfolio Section -->
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Services</h2>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon flex-shrink-0"><i class="bi bi-bar-chart-line"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Data Analysis
+                                    &amp; Insights</a></h4>
+                            <p class="description">Exploratory analysis, statistical testing and reports to reveal
+                                actionable patterns in your business data.</p>
+                        </div>
+                    </div>
+                    <!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon flex-shrink-0"><i class="bi bi-cpu"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Machine
+                                    Learning Models</a></h4>
+                            <p class="description">Custom predictive models (classification, regression,
+                                clustering) designed, trained and validated to solve real-world problems.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon flex-shrink-0"><i class="bi bi-graph-up"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">Dashboards &amp;
+                                    Visualization</a></h4>
+                            <p class="description">Interactive and executive dashboards in Power BI, Looker or Python
+                                (Streamlit) that tell stories with data.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Services Section -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Contact</h2>
+                <p>Interested in working together or have a data challenge to discuss? Get in touch —
+                    I'd love to hear from you.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-8 offset-lg-2">
+
+                        <div class="info-wrap">
+                            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                                <div>
+                                    <h3>Location</h3>
+                                    <p>Brazil (Available remotely)</p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                                <i class="bi bi-linkedin flex-shrink-0"></i>
+                                <div>
+                                    <h3>LinkedIn</h3>
+                                    <p>https://www.linkedin.com/in/allyssondesouza/</p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                                <i class="bi bi-envelope flex-shrink-0"></i>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p>allyssonsouza1@hotmail.com</p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                                <i class="bi bi-github flex-shrink-0"></i>
+                                <div>
+                                    <h3>GitHub</h3>
+                                    <p>https://github.com/Allyssonsouza1</p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /Contact Section -->
+
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+
+        <div class="container">
+            <div class="copyright text-center ">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Allysson de S. Pereira</strong> <span>All Rights
+                        Reserved</span></p>
+            </div>
+            <div class="credits">
+                Designed with <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="assets/js/analytics.js"></script>
+    <script src="assets/js/analytics-sections.js"></script>
+</body>
+
+</html>

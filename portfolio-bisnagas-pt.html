@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cluster Bisnagas - Industria de Cosmeticos | Allysson S. Pereira</title>
+    <meta content="Trabalho de Data Science focado na otimização dos processos de produção de bisnagas em uma industria de cosmeticos."
+        name="description">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        .lang-switcher {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .lang-switcher a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        .lang-switcher a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .lang-switcher .flag {
+            font-size: 15px;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: var(--accent-color, #0563bb);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin: 3px 2px;
+        }
+
+        .placeholder-slide {
+            background: #1a1f2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            color: #555;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .placeholder-slide i {
+            font-size: 48px;
+            opacity: 0.3;
+        }
+
+        .placeholder-slide p {
+            font-size: 13px;
+            opacity: 0.5;
+            margin: 0;
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK8WBCFGK1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JK8WBCFGK1', {
+            'send_page_view': true
+        });
+    </script>
+</head>
+
+<body class="portfolio-details-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+        <div class="profile-img"><img src="assets/img/my-profile-img.png" alt="Allysson de S. Pereira"
+                class="img-fluid rounded-circle"></div>
+        <a href="index-pt.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Allysson de S. Pereira</h1>
+        </a>
+        <div class="lang-switcher">
+            <a href="portfolio-bisnagas.html"><span class="flag">🇺🇸</span> EN</a>
+            <a href="portfolio-bisnagas-pt.html"><span class="flag">🇧🇷</span> PT</a>
+        </div>
+        <div class="social-links text-center">
+            <a href="https://github.com/Allyssonsouza1" class="github" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/allyssondesouza/" class="linkedin" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
+        </div>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index-pt.html#hero"><i class="bi bi-house navicon"></i> Início</a></li>
+                <li><a href="index-pt.html#about"><i class="bi bi-person navicon"></i> Sobre</a></li>
+                <li><a href="index-pt.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Currículo</a></li>
+                <li><a href="index-pt.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Portfólio</a>
+                </li>
+                <li><a href="index-pt.html#services"><i class="bi bi-hdd-stack navicon"></i> Serviços</a></li>
+                <li><a href="index-pt.html#contact"><i class="bi bi-envelope navicon"></i> Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="page-title dark-background">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">Clustering de Bisnaga  s</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index-pt.html">Início</a></li>
+                        <li><a href="index-pt.html#portfolio">Portfólio</a></li>
+                        <li class="current">Clustering de Bisnagas</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <section id="portfolio-details" class="portfolio-details section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper init-swiper">
+                            <script type="application/json" class="swiper-config">
+                { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+              </script>
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/cluster-bisnagas/bis1.png"
+                                        alt="Tela do Sistema de Precificação 1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/cluster-bisnagas/bis 2.png"
+                                        alt="Tela do Sistema de Precificação 2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/cluster-bisnagas/bis 3.png"
+                                        alt="Tela do Sistema de Precificação 3">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/cluster-bisnagas/bis 4.png"
+                                        alt="Tela do Sistema de Precificação 4">
+                                </div>
+                            
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Informações do Projeto</h3>
+                            <ul>
+                                <li><strong>Categoria:</strong> Ciência de Dados & Machine Learning</li>
+                                <li><strong>Tipo:</strong> Projeto de Clusterização (EDA → Modelagem )
+                                </li>
+                                <li><strong>Status:</strong> Concluído </li>
+                                <li><strong>GitHub:</strong> <a
+                                        href="https://github.com/Allyssonsouza1/Cluster_Bisnagas_Industria_de_Cosmeticos/tree/main"
+                                        target="_blank">Ver Repositório →</a></li>
+                            </ul>
+                            <div class="mt-3">
+                                <strong>Tecnologias:</strong><br>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">Numpy</span>
+                                <span class="tech-badge">Seaborn</span>
+                                <span class="tech-badge">Matplotlib</span>
+                                <span class="tech-badge">Scikit-learn</span>
+                                <span class="tech-badge">K-means</span>
+                                <span class="tech-badge">Hierarchical Clustering (Ward)</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                            <h2>Otimização de Performance Industrial via Clustering de SKUs</h2>
+                            <p>Este projeto aplica técnicas de Aprendizagem de Máquina Não Supervisionada para mapear
+                                e agrupar um portfólio complexo de mais de 2.000 SKUs de bisnagas, visando a otimização
+                                do sequenciamento produtivo. O trabalho aborda o desafio crítico de reduzir tempos de
+                                setup e aumentar a cadência de produção através da criação de famílias de produtos
+                                baseadas em características físicas e técnicas (diâmetro, altura, tipos de selagem).
+                                A metodologia envolveu uma análise comparativa robusta entre algoritmos de K-Means, Clusterização
+                                Hierárquica (Método de Ward) e Gaussian Mixture Models (GMM), garantindo que os agrupamentos fossem
+                                tecnicamente coerentes com a realidade operacional da fábrica.
+                            </p>
+                            <p>A implementação do modelo final (K-Means com K=65) permitiu a substituição de critérios subjetivos de
+                                sequenciamento por um rigor estatístico que resultou em ganhos operacionais imediatos. 
+                                A otimização dos roteiros produtivos viabilizou a internalização de 7% do volume que anteriormente
+                                era terceirizado, gerando um retorno financeiro estimado em R$ 1,5 milhão em receita. Ao agrupar itens
+                                com características de envase similares, o projeto maximizou o OEE (Overall Equipment Effectiveness) e
+                                estabeleceu uma base sólida para a gestão de categorias no ambiente industrial.
+                            </p>
+                            <h4 class="mt-3">Principais Destaques</h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle text-primary"></i> Impacto Financeiro: Viabilização da internalização de 7% do volume
+                                     terceirizado, gerando R$ 1,5 milhão em receita anual.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Validação Multicritério: Uso de Silhouette Score e Davies-Bouldin para
+                                 garantir a coesão e separação estatística dos 65 clusters.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Refinamento Hierárquico: Aplicação do Método de Mojena 
+                                    e Correlação Cofenética para definição precisa dos pontos de corte no dendrograma.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Engenharia de Variáveis: Seleção estratégica de features técnicas e remoção
+                                    de redundâncias para aumentar a homogeneidade das famílias.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Otimização de OEE: Redução de tempos de setup e aumento da cadência produtiva
+                                     através do sequenciamento baseado em famílias.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Benchmarking de Algoritmos: Análise comparativa entre K-Means, Hierárquico (Ward) e GMM para garantir a robustez do modelo em ambiente industrial.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Allysson S. Pereira</strong> <span>Todos os Direitos
+                        Reservados</span></p>
+            </div>
+            <div class="credits">Design por <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+        </div>
+    </footer>
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/analytics.js"></script>
+</body>
+
+</html>

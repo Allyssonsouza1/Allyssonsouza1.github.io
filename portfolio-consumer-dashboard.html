@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dashboard - Consumer Loyalty Program | Allysson de S. Pereira</title>
+    <meta content="BI Project: Consumer Loyalty Program Analytical Dashboard built in Looker Studio" name="description">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        .lang-switcher {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .lang-switcher a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        .lang-switcher a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .lang-switcher .flag {
+            font-size: 15px;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: var(--accent-color, #0563bb);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin: 3px 2px;
+        }
+
+        .placeholder-slide {
+            background: #1a1f2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            color: #555;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .placeholder-slide i {
+            font-size: 48px;
+            opacity: 0.3;
+        }
+
+        .placeholder-slide p {
+            font-size: 13px;
+            opacity: 0.5;
+            margin: 0;
+        }
+
+        .swiper-slide img {
+            max-height: 500px;
+            width: 100%;
+            object-fit: contain;
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK8WBCFGK1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JK8WBCFGK1', {
+            'send_page_view': true
+        });
+    </script>
+</head>
+
+<body class="portfolio-details-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+        <div class="profile-img"><img src="assets/img/my-profile-img.png" alt="Allysson de S. Pereira"
+                class="img-fluid rounded-circle"></div>
+        <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Allysson de S. Pereira</h1>
+        </a>
+        <div class="lang-switcher">
+            <a href="portfolio-consumer-dashboard.html" class="active-lang"><span class="flag">🇺🇸</span> EN</a>
+            <a href="portfolio-consumer-dashboard-pt.html"><span class="flag">🇧🇷</span> PT</a>
+        </div>
+        <div class="social-links text-center">
+            <a href="https://github.com/Allyssonsouza1" class="github" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/allyssondesouza/" class="linkedin" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
+        </div>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index.html#hero"><i class="bi bi-house navicon"></i> Home</a></li>
+                <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+                <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+                <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Portfolio</a>
+                </li>
+                <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+                <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="page-title dark-background">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">Dashboard - Consumer Loyalty Program</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li class="current">Consumer Loyalty Program (BI)</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <section id="portfolio-details" class="portfolio-details section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper init-swiper">
+                            <script type="application/json" class="swiper-config">
+                { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+              </script>
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/consumer-dashboard/consumer 1.png"
+                                        alt="Consumer Dashboard 1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/consumer-dashboard/consumer 2.png"
+                                        alt="Consumer Dashboard 2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/consumer-dashboard/consumer 3.png"
+                                        alt="Consumer Dashboard 3">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/consumer-dashboard/consumer 4.png"
+                                        alt="Consumer Dashboard 4">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/consumer-dashboard/consumer 5.png"
+                                        alt="Consumer Dashboard 5">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Project Information</h3>
+                            <ul>
+                                <li><strong>Category:</strong> Analytics / BI</li>
+                                <li><strong>Type:</strong> Looker Studio Dashboard</li>
+                                <li><strong>Status:</strong> Completed</li>
+                                <li><strong>Dashboard:</strong> <a
+                                        href="https://lookerstudio.google.com/reporting/81289d3c-a644-45dc-a465-487ae10963b8"
+                                        target="_blank">View Dashboard →</a></li>
+                            </ul>
+                            <div class="mt-3">
+                                <strong>Technologies:</strong><br>
+                                <span class="tech-badge">Looker Studio</span>
+                                <span class="tech-badge">Google Sheets</span>
+                                <span class="tech-badge">SQL</span>
+                                <span class="tech-badge">GCP - BigQuery</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                            <h2>Performance Dashboard: Loyalty Program (Cosmetics)</h2>
+                            <p>This project presents the development of a Business Intelligence solution focused on
+                                monitoring and optimizing the customer journey within a cosmetics industry loyalty program.
+                                The dashboard was structured to serve different levels of decision-making, from high-level strategic
+                                tracking to granular analysis of consumer behavior. Using a modern data ecosystem with GCP (BigQuery),
+                                SQL for modeling and Looker for visualization, the solution allows identifying engagement bottlenecks
+                                and opportunities to maximize LTV (Lifetime Value).</p>
+                            <p>The tool organizes complex metrics into three fundamental pillars, ensuring that the operation
+                                can react quickly to changes in point redemption behavior and migration between loyalty tiers
+                                (Silver/Gold). With this 360º view, management can correlate the financial impact (GMV) with
+                                the effectiveness of retention mechanics, transforming transactional data into growth and brand
+                                loyalty strategies.</p>
+                            <h4 class="mt-3">Key Highlights</h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle text-primary"></i> Visualization Hierarchy: Structured in layers (Strategic, Operational and Consumer) to facilitate the interpretation of indicators by different stakeholders.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Strategic Metrics and LTV: Tracking critical KPIs such as Overall Average Ticket, Purchase Frequency and the value generated per active customer (LTV).</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Robust Tech Stack: Implementation of a data pipeline using BigQuery for large-scale processing and Looker for delivering interactive and dynamic dashboards.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Allysson de S. Pereira</strong> <span>All Rights
+                        Reserved</span></p>
+            </div>
+            <div class="credits">Designed with <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+        </div>
+    </footer>
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/analytics.js"></script>
+</body>
+
+</html>

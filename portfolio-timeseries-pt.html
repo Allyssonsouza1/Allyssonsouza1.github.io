@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Predição de Chuvas (Séries Temporais) | Allysson S. Pereira</title>
+    <meta content="Projeto de Séries Temporais: Predição de Chuvas no Estado de São Paulo."
+        name="description">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        .lang-switcher {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .lang-switcher a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        .lang-switcher a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .lang-switcher .flag {
+            font-size: 15px;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: var(--accent-color, #0563bb);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin: 3px 2px;
+        }
+
+        .placeholder-slide {
+            background: #1a1f2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            color: #555;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .placeholder-slide i {
+            font-size: 48px;
+            opacity: 0.3;
+        }
+
+        .placeholder-slide p {
+            font-size: 13px;
+            opacity: 0.5;
+            margin: 0;
+        }
+    </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK8WBCFGK1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JK8WBCFGK1', {
+      'send_page_view': true
+    });
+  </script>
+</head>
+
+<body class="portfolio-details-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+        <div class="profile-img"><img src="assets/img/my-profile-img.png" alt="Allysson S. Pereira"
+                class="img-fluid rounded-circle"></div>
+        <a href="index-pt.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Allysson S. Pereira</h1>
+        </a>
+        <div class="lang-switcher">
+            <a href="portfolio-timeseries.html"><span class="flag">🇺🇸</span> EN</a>
+            <a href="portfolio-timeseries-pt.html" class="active-lang"><span class="flag">🇧🇷</span> PT</a>
+        </div>
+        <div class="social-links text-center">
+            <a href="https://github.com/Allyssonsouza1" class="github" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://linkedin.com/in/Allyssonsouza1" class="linkedin" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
+        </div>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index-pt.html#hero"><i class="bi bi-house navicon"></i> Início</a></li>
+                <li><a href="index-pt.html#about"><i class="bi bi-person navicon"></i> Sobre</a></li>
+                <li><a href="index-pt.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Currículo</a></li>
+                <li><a href="index-pt.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Portfólio</a>
+                </li>
+                <li><a href="index-pt.html#services"><i class="bi bi-hdd-stack navicon"></i> Serviços</a></li>
+                <li><a href="index-pt.html#contact"><i class="bi bi-envelope navicon"></i> Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="page-title dark-background">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">Predição de Chuvas e Eventos Extremos</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index-pt.html">Início</a></li>
+                        <li><a href="index-pt.html#portfolio">Portfólio</a></li>
+                        <li class="current">Séries Temporais (Chuvas)</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <section id="portfolio-details" class="portfolio-details section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper init-swiper">
+                            <script type="application/json" class="swiper-config">
+                { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+              </script>
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide">
+                                    <div class="placeholder-slide"><i class="bi bi-chat-text"></i>
+                                        <p>Adicione imagens em assets/img/projects/timeseries/</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="placeholder-slide"><i class="bi bi-cloud"></i>
+                                        <p>Nuvem de Palavras (Word Cloud)</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="placeholder-slide"><i class="bi bi-bar-chart"></i>
+                                        <p>Distribuição de Sentimento</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Informações do Projeto</h3>
+                            <ul>
+                                <li><strong>Categoria:</strong> Machine Learning / Séries Temporais</li>
+                                <li><strong>Tipo:</strong> Predição de Séries Temporais</li>
+                                <li><strong>Status:</strong> Concluído</li>
+                                <li><strong>GitHub:</strong> <a href="https://github.com/Allyssonsouza1"
+                                        target="_blank">Ver GitHub →</a></li>
+                            </ul>
+                            <div class="mt-3">
+                                <strong>Tecnologias:</strong><br>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">Matplotlib, Seaborn</span>
+                                <span class="tech-badge">Statsmodels</span>
+                                <span class="tech-badge">Pmdarima (Auto-ARIMA)</span>
+                                <span class="tech-badge">Scikit-learn</span>
+                                
+                            </div>
+                        </div>
+                        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                            <h2>Predição de Chuvas e Eventos Extremos (Séries Temporais)</h2>
+                            <p>Este projeto utiliza técnicas avançadas de Ciência de Dados para analisar o histórico pluviométrico
+                                do Estado de São Paulo e prever volumes de precipitação, auxiliando na antecipação de eventos críticos
+                                como secas ou enchentes. O trabalho inclui todo o ciclo de desenvolvimento de um modelo preditivo: ingestão
+                                e limpeza de dados (DAEE 1985-2021), análise exploratória, engenharia de features temporais, treinamento de
+                                múltiplas arquiteturas, otimização de hiperparâmetros e análise de interpretabilidade estatística.
+                                O estudo compara o desempenho de modelos lineares clássicos contra abordagens que consideram a sazonalidade,
+                                definindo a estratégia mais segura para o planejamento hidrológico regional.</p>
+                            <p>O modelo SARIMA provou ser superior em todas as métricas de avaliação, alcançando um RMSE de 59.63, o que
+                                representa uma redução drástica de erro em comparação aos modelos AR e MA simples. O diferencial desta
+                                abordagem foi a capacidade de capturar a sazonalidade característica do clima tropical, prevendo com
+                                precisão os picos de chuva de janeiro onde modelos conservadores falharam. Essa assertividade transforma
+                                dados históricos em uma ferramenta de prevenção, permitindo uma gestão de recursos hídricos baseada em
+                                evidências estatísticas e reduzindo os riscos de desastres naturais.</p>
+                            <h4 class="mt-3">Principais Destaques</h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle text-primary"></i> Modelagem Preditiva Multicritério: Comparação rigorosa entre 5 modelos 
+                                    de séries temporais (AR, MA, ARMA, ARIMA e SARIMA) para identificação da melhor performance.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Testes de Estacionariedade: Aplicação do teste KPSS (Kwiatkowski-Phillips-Schmidt-Shin)
+                                     para validar a estrutura da série e garantir o tratamento adequado de tendências.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Otimização via AIC: Utilização do Critério de Informação de Akaike (AIC) para selecionar
+                                     o modelo com o melhor equilíbrio entre complexidade e poder preditivo.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Captura de Sazonalidade: Implementação de componentes sazonais que permitiram modelar com
+                                     precisão a volatilidade e os picos pluviométricos anuais.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Análise de Erro e Validação: Avaliação comparativa detalhada (RMSE e MAE), demonstrando a
+                                     superioridade do SARIMA na mitigação de subestimação de eventos extremos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Allysson S. Pereira</strong> <span>Todos os Direitos
+                        Reservados</span></p>
+            </div>
+            <div class="credits">Design por <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+        </div>
+    </footer>
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+  <script src="assets/js/analytics.js"></script>
+</body>
+
+</html>
