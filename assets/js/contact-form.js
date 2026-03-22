@@ -2,12 +2,12 @@
  * Contact Form Handler — Formspree (static-site compatible)
  *
  * HOW TO SET UP:
- *  1. Go to https://formspree.io and sign in with felipesembay91@gmail.com
+ *  1. Go to https://formspree.io and sign in with allyssonsouza1@hotmail.com
  *  2. Click "New Form", give it a name (e.g. "Portfolio Contact")
  *  3. Copy the form endpoint, e.g. https://formspree.io/f/xabcdefg
  *  4. Replace FORMSPREE_ENDPOINT below with your real endpoint
  *
- * The form will then send emails directly to felipesembay91@gmail.com
+ * The form will then send emails directly to allyssonsouza1@hotmail.com
  * Free plan: 50 submissions/month — more than enough for a portfolio.
  */
 

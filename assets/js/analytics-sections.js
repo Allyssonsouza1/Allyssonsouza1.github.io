@@ -1,5 +1,5 @@
 /**
- * GA4 Virtual Pageview Tracker — Felipe Sembay Portfolio
+ * GA4 Virtual Pageview Tracker — Allysson de S. Pereira Portfolio
  * Fires a GA4 page_view event whenever a section becomes visible,
  * giving GA4 granular per-section analytics without changing the URL.
  */
@@ -35,7 +35,7 @@
         if (typeof gtag !== 'function') return;
 
         gtag('event', 'page_view', {
-            page_title: sectionTitle + ' | Felipe Sembay',
+            page_title: sectionTitle + ' | Allysson de S. Pereira',
             page_location: window.location.origin + virtualPath,
             page_path: virtualPath,
         });
