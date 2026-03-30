@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dashboard - Inteligência Aeronáutica | Allysson de S. Pereira</title>
+    <meta content="Projeto de BI: Dashboard de Inteligência Aeronáutica e Gestão de Ativos feito no Power BI" name="description">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        .lang-switcher {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .lang-switcher a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        .lang-switcher a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .lang-switcher .flag {
+            font-size: 15px;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: var(--accent-color, #0563bb);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin: 3px 2px;
+        }
+
+        .placeholder-slide {
+            background: #1a1f2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            color: #555;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .placeholder-slide i {
+            font-size: 48px;
+            opacity: 0.3;
+        }
+
+        .placeholder-slide p {
+            font-size: 13px;
+            opacity: 0.5;
+            margin: 0;
+        }
+
+        .swiper-slide img {
+            max-height: 500px;
+            width: 100%;
+            object-fit: contain;
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RP9S925B5D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RP9S925B5D');
+    </script>
+</head>
+
+<body class="portfolio-details-page">
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+        <div class="profile-img"><img src="assets/img/my-profile-img.jpg" alt="Allysson de S. Pereira"
+                class="img-fluid rounded-circle"></div>
+        <a href="index-pt.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Allysson de S. Pereira</h1>
+        </a>
+        <div class="lang-switcher">
+            <a href="portfolio-taxi-aereo.html"><span class="flag">🇺🇸</span> EN</a>
+            <a href="portfolio-taxi-aereo-pt.html" class="active-lang"><span class="flag">🇧🇷</span> PT</a>
+        </div>
+        <div class="social-links text-center">
+            <a href="https://github.com/Allyssonsouza1" class="github" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/allyssondesouza/" class="linkedin" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
+        </div>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index-pt.html#hero"><i class="bi bi-house navicon"></i> Início</a></li>
+                <li><a href="index-pt.html#about"><i class="bi bi-person navicon"></i> Sobre</a></li>
+                <li><a href="index-pt.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Currículo</a></li>
+                <li><a href="index-pt.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Portfólio</a>
+                </li>
+                <li><a href="index-pt.html#services"><i class="bi bi-hdd-stack navicon"></i> Serviços</a></li>
+                <li><a href="index-pt.html#contact"><i class="bi bi-envelope navicon"></i> Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="page-title dark-background">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">Dashboard - Inteligência Aeronáutica</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index-pt.html">Início</a></li>
+                        <li><a href="index-pt.html#portfolio">Portfólio</a></li>
+                        <li class="current">Inteligência Aeronáutica (BI)</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <section id="portfolio-details" class="portfolio-details section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper init-swiper">
+                            <script type="application/json" class="swiper-config">
+                { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+              </script>
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/taxi_aereo/h0.jpg"
+                                        alt="Taxi Aereo Dashboard 1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/taxi_aereo/h1.jpg"
+                                        alt="Taxi Aereo Dashboard 2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/taxi_aereo/h2.jpg"
+                                        alt="Taxi Aereo Dashboard 3">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Informações do Projeto</h3>
+                            <ul>
+                                <li><strong>Categoria:</strong> Analytics / BI</li>
+                                <li><strong>Tipo:</strong> Dashboard Operacional</li>
+                                <li><strong>Status:</strong> Concluído</li>
+                                <li><strong>Dashboard:</strong> <a
+                                        href="https://app.powerbi.com/view?r=eyJrIjoiYTQ2Y2ZjOTItN2M5ZS00MWVlLWIxMDItMWQ5Y2M2YTg0OWE5IiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9"
+                                        target="_blank">Acessar Dashboard →</a></li>
+                            </ul>
+                            <div class="mt-3">
+                                <strong>Tecnologias:</strong><br>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Power BI</span>
+                                <span class="tech-badge">Power Query (DAX)</span>
+                                <span class="tech-badge">Finance</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300" style="text-align: justify;">
+                            <h2>Dashboard de Inteligência Aeronáutica e Gestão de Ativos</h2>
+                            <p>Este projeto apresenta o desenvolvimento de uma solução de Business Intelligence voltada à gestão estratégica de ativos aeronáuticos, utilizando um <strong>dataset totalmente fictício e sintético gerado em Python</strong> para simular operações reais. A ferramenta centraliza a visibilidade sobre a performance operacional e financeira da frota, cobrindo o ciclo completo de modelagem dimensional de múltiplas fontes de dados (Voos, Receitas, Manutenção e Utilização). O objetivo é transformar registros brutos de voo em insights imediatos para a otimização da malha aérea e maximização da rentabilidade por aeronave.</p>
+                            <p>A implementação desta solução permitiu unir o rigor técnico da modelagem à visão estratégica da gestão, facilitando a identificação rápida de aeronaves e rotas com baixa performance financeira. Através da análise estratificada de cancelamentos por motivo (técnico, meteorológico ou tripulação), o dashboard possibilita quantificar o custo de oportunidade e o impacto da ociosidade na frota. O impacto direto é uma tomada de decisão mais assertiva sobre precificação, alocação eficiente de recursos e projetos de melhoria contínua baseados no rigor dos dados cruzados de operação e finanças.</p>
+                            <h4 class="mt-3">Principais Destaques</h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle text-primary"></i> <strong>Visão Integrada Operacional & Financeira:</strong> Monitoramento dinâmico que conecta KPIs operacionais de Regularidade (%) e Pontualidade (%) diretamente aos resultados de Margem de Lucro e Receita por Hora Voada.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> <strong>Diagnóstico de Impacto por Cancelamentos:</strong> Análise detalhada dos motivos de interrupção de voos para quantificar financeiramente o custo de oportunidade decorrente de falhas ou fatores externos.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> <strong>Ranking de Rentabilidade por Ativo:</strong> Identificação precisa do Lucro Líquido e Margem por prefixo de aeronave, fundamental para decisões estratégicas sobre manutenção, renovação ou expansão da frota.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> <strong>Modelagem de Dados Sintética e Robusta:</strong> Estrutura dimensional avançada no Power BI, baseada em um modelo de dados escalável criado via Python para simular a complexidade de sistemas de aviação reais.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Allysson de S. Pereira</strong> <span>Todos os Direitos
+                        Reservados</span></p>
+            </div>
+            <div class="credits">Design por <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+        </div>
+    </footer>
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/analytics.js"></script>
+</body>
+
+</html>
