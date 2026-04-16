@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Classificação Multiclasse de Empresas B2B | Allysson de S. Pereira</title>
+    <meta content="Projeto de Ciência de Dados: Classificação Multiclasse com NLP, XGBoost e IA Generativa (GPT-4o-mini) para empresas Food Service."
+        name="description">
+    <meta content="classificação multiclasse, NLP, XGBoost, IA Generativa, machine learning, Python, Allysson de S. Pereira" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        .lang-switcher {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .lang-switcher a {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+        .lang-switcher a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .lang-switcher .flag {
+            font-size: 15px;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: var(--accent-color, #0563bb);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin: 3px 2px;
+        }
+
+        .portfolio-info ul li strong {
+            min-width: 90px;
+            display: inline-block;
+        }
+
+        .portfolio-info a {
+            color: var(--accent-color, #0563bb);
+            font-weight: 600;
+        }
+
+        .placeholder-slide {
+            background: #1a1f2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            color: #555;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .placeholder-slide i {
+            font-size: 48px;
+            opacity: 0.3;
+        }
+
+        .placeholder-slide p {
+            font-size: 13px;
+            opacity: 0.5;
+            margin: 0;
+        }
+
+        .swiper-slide img {
+            max-height: 500px;
+            width: 100%;
+            object-fit: contain;
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RP9S925B5D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RP9S925B5D');
+    </script>
+</head>
+
+<body class="portfolio-details-page">
+
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+
+        <div class="profile-img">
+            <img src="assets/img/my-profile-img.jpg" alt="Allysson de S. Pereira" class="img-fluid rounded-circle">
+        </div>
+
+        <a href="index-pt.html" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">Allysson de S. Pereira</h1>
+        </a>
+
+        <div class="lang-switcher">
+            <a href="portfolio-food_service.html"><span class="flag">🇺🇸</span> EN</a>
+            <a href="portfolio-food_service-pt.html"><span class="flag">🇧🇷</span> PT</a>
+        </div>
+
+        <div class="social-links text-center">
+            <a href="https://github.com/Allyssonsouza1" class="github" title="GitHub" target="_blank"><i
+                    class="bi bi-github"></i></a>
+            <a href="https://linkedin.com/in/allyssondesouza" class="linkedin" title="LinkedIn" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
+        </div>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="index-pt.html#hero"><i class="bi bi-house navicon"></i> Início</a></li>
+                <li><a href="index-pt.html#about"><i class="bi bi-person navicon"></i> Sobre</a></li>
+                <li><a href="index-pt.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Currículo</a></li>
+                <li><a href="index-pt.html#portfolio" class="active"><i class="bi bi-images navicon"></i> Portfólio</a>
+                </li>
+                <li><a href="index-pt.html#services"><i class="bi bi-hdd-stack navicon"></i> Serviços</a></li>
+                <li><a href="index-pt.html#contact"><i class="bi bi-envelope navicon"></i> Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">Classificação Multiclasse de Empresas B2B</h1>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index-pt.html">Início</a></li>
+                        <li><a href="index-pt.html#portfolio">Portfólio</a></li>
+                        <li class="current">Classificação Food Service</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Portfolio Details Section -->
+        <section id="portfolio-details" class="portfolio-details section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+
+                    <!-- Image Slider -->
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper init-swiper">
+                            <script type="application/json" class="swiper-config">
+                { "loop": true, "speed": 600, "autoplay": { "delay": 5000 }, "slidesPerView": "auto", "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true } }
+              </script>
+
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/food_service/1.bag_of_words.png" alt="Bag of Words - Nuvem de Palavras">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/food_service/2.grafico_importancia.png" alt="Gráfico de Importância das Features">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/food_service/3.ll_performance.png" alt="Performance do LLM vs XGBoost">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/projects/food_service/4.tabela_metricas.png" alt="Tabela Comparativa de Métricas">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <!-- Project Info -->
+                    <div class="col-lg-4">
+                        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Informações do Projeto</h3>
+                            <ul>
+                                <li><strong>Categoria:</strong> Ciência de Dados & Machine Learning</li>
+                                <li><strong>Tipo:</strong> Projeto Real de Classificação Multiclasse (NLP → Modelagem Tabular → IA Generativa)</li>
+                                <li><strong>Status:</strong> Concluído</li>
+                                <li><strong>GitHub:</strong> <a
+                                        href="https://github.com/Allyssonsouza1/hybrid-llm-xgboost-classifier.git"
+                                        target="_blank">Ver Repositório →</a></li>
+                            </ul>
+                            <div class="mt-3">
+                                <strong>Tecnologias:</strong><br>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">Scikit-learn</span>
+                                <span class="tech-badge">XGBoost</span>
+                                <span class="tech-badge">NLTK (Bag of Words)</span>
+                                <span class="tech-badge">OpenAI API (GPT-4o-mini)</span>
+                                <span class="tech-badge">GridSearchCV</span>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300" style="text-align: justify;">
+                            <h2>Classificação Multiclasse de Empresas B2B</h2>
+                            <p>Este é um projeto real que aplica técnicas de Machine Learning e Processamento de Linguagem Natural (NLP) para classificar empresas em quatro subsegmentos (Auto Serviço, Cash & Carry, Lanchonete e Padaria). O trabalho aborda um desafio clássico de dados de mercado: a ambiguidade semântica. O objetivo central foi resolver a sobreposição de vocabulário, onde, por exemplo, atacadistas gigantes e mercadinhos de bairro utilizam termos genéricos como "Supermercado" em suas razões sociais e operam sob regras tributárias muito parecidas. A metodologia envolveu engenharia de variáveis (cruzando texto com CNAE e Capital Social) e uma análise comparativa robusta evoluindo de Árvores de Decisão para Random Forest e XGBoost, culminando no teste de uma arquitetura híbrida com IA Generativa (LLMs).</p>
+                            <p>A implementação do modelo final (XGBoost Otimizado) cravou um F1-Score ponderado de 84% em validação cruzada, estabelecendo um novo modelo de referência com 96% de precisão na identificação de atacadistas (Cash & Carry) — o maior gargalo do negócio. Além de entregar um classificador rápido e de baixo custo computacional, o projeto utilizou o GPT-4o-mini como extrator semântico para diagnosticar os limites da base original. Essa etapa diagnóstica provou matematicamente que a ausência do campo "Nome Fantasia" nas bases de cadastro custava quase 20 pontos percentuais de performance, direcionando estrategicamente os próximos passos da companhia para o enriquecimento dos dados na origem, visando a maturidade e qualidade dos dados.</p>
+                            <h4 class="mt-3">Principais Destaques</h4>
+                            <ul>
+                                <li><i class="bi bi-check-circle text-primary"></i> Direcionamento Estratégico: Uso de LLM (GPT-4o-mini) não apenas como classificador, mas como ferramenta diagnóstica para provar que o gargalo preditivo era a maturidade e qualidade dos dados (ausência de completude).</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Precisão Cirúrgica no Gargalo: O modelo campeão atingiu 96% de precisão na classe mais crítica e desafiadora do negócio (Cash & Carry) e 98% de recall na captura total de Lanchonetes.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Engenharia de Variáveis Múltiplas: Integração de NLP tradicional (Bag of Words) com features numéricas e categóricas (CNAE e Capital Social imputado) para quebrar a barreira de decisão do texto.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Rigor Estatístico e Validação: Uso de Stratified 5-Fold Cross-Validation e GridSearchCV para estabilizar as métricas, garantir a capacidade de generalização e assegurar a robustez da arquitetura contra overfitting.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Trade-off Consciente: Análise profunda de métricas (Macro vs Weighted Avg, Precision vs Recall) para garantir que a penalização matemática do algoritmo refletisse a realidade e a volumetria do mercado no dia a dia.</li>
+                                <li><i class="bi bi-check-circle text-primary"></i> Benchmarking Algorítmico: Evolução técnica fundamentada, partindo de um Baseline simples (Decision Tree), passando por Ensembles (Random Forest) até atingir o limite tabular com o XGBoost e a experimentação semântica com GenAI.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Allysson de S. Pereira</strong> <span>Todos os
+                        Direitos
+                        Reservados</span></p>
+            </div>
+            <div class="credits">Design por <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
+        </div>
+    </footer>
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="assets/js/analytics.js"></script>
+</body>
+
+</html>
